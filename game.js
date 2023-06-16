@@ -64,8 +64,16 @@ function checkAnswer() {
     gamePattern.splice(0);
     level = 0;
     $("body").addClass("game-over");
+    $(".button-74").css("display", "inline-block");
     setTimeout(() => {
       $("body").removeClass("game-over");
     }, 200);
   }
 }
+
+$(".button-74").click(function (e) {
+  $("#level-title").text("Level 0");
+  $(".button-74").css("display", "none");
+  nextSequence();
+  e.preventDefault();
+});
