@@ -40,6 +40,7 @@ function animatePress(currentColour) {
 $(document).keypress(function (e) {
   if (e.key === "a") {
     $("#level-title").text("Level 0");
+    $(".button-74").css("display", "none");
     nextSequence();
   }
 });
